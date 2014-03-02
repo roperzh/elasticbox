@@ -16,9 +16,26 @@
     width: 25%;
     height: 50px;
     float: left;
+    padding:5px;
 
     background: $contrast;
-    text-transform: uppercase;
     color: $contrast-ligther;
+    text-transform: uppercase;
+    font-family: monospace;
+
+    &:hover {
+      color: $base;
+      background: $neutral;
+    }
+
+    p {
+      margin: 5px 0 0 0;
+
+      font-size: 13px;
+    }
+
+    i {
+      font-size: 18px;
+    }
   }
 }
