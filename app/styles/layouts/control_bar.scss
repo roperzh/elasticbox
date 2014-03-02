@@ -14,4 +14,28 @@
   left: 0;
 
   width: 480px;
+
+  .header {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    background: $base;
+  }
+
+  .options {
+    position: absolute;
+    bottom: 30px;
+
+    width: 100%;
+    background: $base-ligther;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    background: $base;
+  }
 }
