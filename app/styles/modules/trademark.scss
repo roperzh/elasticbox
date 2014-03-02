@@ -1,0 +1,30 @@
+// *************************************
+//
+//   Trademark
+//   -> The icon and the name of the application
+//
+// *************************************
+
+
+.trademark {
+  @include clearfix;
+
+  padding: 5px;
+
+  font-size: 35px;
+  color: white;
+  text-align: center;
+
+  .icon {
+    margin-left: 10px;
+    font-size: 45px;
+  }
+
+  .name {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-transform: lowercase;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
