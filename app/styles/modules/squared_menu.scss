@@ -1,0 +1,24 @@
+// *************************************
+//
+//   Squared Menu
+//   -> Menu with squared items
+//
+// *************************************
+
+
+.squared-menu {
+
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+  .item {
+    width: 25%;
+    height: 50px;
+    float: left;
+
+    background: $contrast;
+    text-transform: uppercase;
+    color: $contrast-ligther;
+  }
+}
