@@ -8,12 +8,11 @@ window.elasticbox = {
   Routers: {},
   init: function () {
     'use strict';
-    console.log('Hello from Backbone!');
+    elasticbox.client = new $.es.Client();
   }
 };
 
 $(document).ready(function () {
   'use strict';
   elasticbox.init();
-  window.client = new $.es.Client();
 });

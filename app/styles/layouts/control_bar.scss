@@ -23,8 +23,9 @@
     background: $base;
   }
 
-  .options {
+  .panel-content {
     position: absolute;
+    top: 112px;
     bottom: 30px;
 
     width: 100%;
