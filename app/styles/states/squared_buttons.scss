@@ -1,0 +1,20 @@
+// *************************************
+//
+//   Squared Menu
+//   -> Menu with squared items
+//
+// *************************************
+
+.squared-menu {
+  .item {
+    &:hover {
+      color: $base;
+      background: $neutral;
+    }
+  }
+
+  .item.active {
+    color: $base;
+    background: $neutral;
+  }
+}
