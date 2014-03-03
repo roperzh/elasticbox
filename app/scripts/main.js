@@ -15,4 +15,5 @@ window.elasticbox = {
 $(document).ready(function () {
   'use strict';
   elasticbox.init();
+  window.client = new $.es.Client();
 });
