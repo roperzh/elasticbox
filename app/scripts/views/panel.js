@@ -21,6 +21,7 @@ elasticbox.Views = elasticbox.Views || {};
 
       this.$(".search-bar").append(this.searchView.el);
     }
+
   });
 
 })();
