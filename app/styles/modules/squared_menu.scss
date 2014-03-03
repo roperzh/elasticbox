@@ -1,0 +1,41 @@
+// *************************************
+//
+//   Squared Menu
+//   -> Menu with squared items
+//
+// *************************************
+
+
+.squared-menu {
+
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+  .item {
+    width: 25%;
+    height: 50px;
+    float: left;
+    padding:5px;
+
+    background: $contrast;
+    color: $contrast-ligther;
+    text-transform: uppercase;
+    font-family: monospace;
+
+    &:hover {
+      color: $base;
+      background: $neutral;
+    }
+
+    p {
+      margin: 5px 0 0 0;
+
+      font-size: 13px;
+    }
+
+    i {
+      font-size: 18px;
+    }
+  }
+}

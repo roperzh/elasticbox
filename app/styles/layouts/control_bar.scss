@@ -1,0 +1,42 @@
+// *************************************
+//
+//   Control Bar
+//   -> Left bar containing all the options
+//      to be displayed in the rigth side
+//
+// *************************************
+
+
+#control-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 480px;
+
+  .header {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    background: $base;
+  }
+
+  .options {
+    position: absolute;
+    bottom: 30px;
+
+    width: 100%;
+    background: $neutral;
+  }
+
+  .footer {
+    position: absolute;
+    height: 50px;
+    bottom: 0;
+
+    width: 100%;
+    background: $base;
+  }
+}
