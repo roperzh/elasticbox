@@ -1,0 +1,54 @@
+// *************************************
+//
+//   Search
+//   -> Search bar, using the markup provided by
+//      autocompletejs plugin
+//
+// *************************************
+
+.search-bar {
+  position: relative;
+
+  i {
+    color: $contrast-ligther;
+    position: absolute;
+    top: 12px;
+    left: 84%;
+  }
+}
+
+.autocomplete_internal_container {
+  margin-top: 15px;
+  text-align: center;
+
+  input {
+    width: 80%!important;
+    height: 40px;
+    padding: 0 12px;
+
+    border: 0;
+    background: $contrast;
+  }
+
+  .dropdown {
+    width: 80%;
+    display: inline-block;
+    // max-height: 150px;
+
+    // overflow: auto;
+    margin: 0;
+    padding: 0;
+
+    text-align: left;
+    background: $contrast;
+
+    .highlighted {
+      background: $contrast-ligther;
+    }
+
+  }
+
+  strong {
+    color: $base;
+  }
+}
