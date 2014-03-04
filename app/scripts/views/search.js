@@ -16,27 +16,31 @@ elasticbox.Views = elasticbox.Views || {};
     },
 
     initialize: function() {
-      this.render();
+      this.collection = new elasticbox.Collections.FeatureCollection();
+      this.collection.fetch()
+        .then(this.render.bind(this));
     },
 
     render: function() {
       this.$el.html(this.template);
-      this.widget = new AutoComplete("search-input", this.searchConfiguration);
+      this.widget = new AutoComplete("search-input", this.searchConfiguration());
       this.widget.focus();
       return this;
     },
 
-    searchConfiguration: {
-      maxTokenGroups: 1,
-      showErrors: "console",
-      lists: {
-        suggestions: {
-          options: ["Backbone", "Angular", "Angular", "Angular", "Angular"],
-          matchOptions: function(input, matchedOptions) {
-            return input.length ? matchedOptions : [];
+    searchConfiguration: function() {
+      return {
+        maxTokenGroups: 1,
+        showErrors: "console",
+        lists: {
+          suggestions: {
+            options: this.collection.getNames(),
+            matchOptions: function(input, matchedOptions) {
+              return input.length ? matchedOptions : [];
+            }
           }
         }
-      },
+      };
     },
 
     clearSearchBar: function(e) {
