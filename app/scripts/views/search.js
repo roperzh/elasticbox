@@ -12,7 +12,8 @@ elasticbox.Views = elasticbox.Views || {};
     el: ".search-bar",
 
     events: {
-      "click .icon-close": "clearSearchBar"
+      "click .icon-close": "clearSearchBar",
+      "keydown .autocomplete-input": "clearOnEscape"
     },
 
     initialize: function() {
@@ -23,30 +24,20 @@ elasticbox.Views = elasticbox.Views || {};
 
     render: function() {
       this.$el.html(this.template);
-      this.widget = new AutoComplete("search-input", this.searchConfiguration());
-      this.widget.focus();
+      this.widget = new elasticbox.Services.SearchSuggester("search-input",
+        this.collection.getNames());
       return this;
     },
 
-    searchConfiguration: function() {
-      return {
-        maxTokenGroups: 1,
-        showErrors: "console",
-        lists: {
-          suggestions: {
-            options: this.collection.getNames(),
-            matchOptions: function(input, matchedOptions) {
-              return input.length ? matchedOptions : [];
-            }
-          }
-        }
-      };
+    clearOnEscape: function(e) {
+      if (e.keyCode === 27) {
+        this.widget.clear();
+      }
     },
 
     clearSearchBar: function(e) {
       e.preventDefault();
       this.widget.clear();
-      this.widget.setInput("");
     }
   });
 })();

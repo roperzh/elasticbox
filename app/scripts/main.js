@@ -5,6 +5,7 @@ window.elasticbox = {
   Collections: {},
   Views: {},
   Routers: {},
+  Services: {},
   init: function() {
     'use strict';
     elasticbox.client = new $.es.Client();
