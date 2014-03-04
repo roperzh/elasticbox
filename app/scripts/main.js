@@ -1,4 +1,4 @@
-/*global elasticbox, $, Backbone*/
+/*global elasticbox, $, Backbone, _*/
 
 window.elasticbox = {
   Models: {},
@@ -22,5 +22,7 @@ window.elasticbox = {
 
 $(document).ready(function() {
   'use strict';
+  _.assign(elasticbox, Backbone.Events);
+  new elasticbox.Services.StatusManager();
   elasticbox.init();
 });

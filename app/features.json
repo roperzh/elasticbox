@@ -1,6 +1,7 @@
 [
 	{
 		"name": "Statistics",
-		"route": "statistics"
+		"url": "statistics",
+    "view": "StatisticsView"
 	}
 ]

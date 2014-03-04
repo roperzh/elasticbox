@@ -25,7 +25,7 @@ elasticbox.Views = elasticbox.Views || {};
     render: function() {
       this.$el.html(this.template);
       this.widget = new elasticbox.Services.SearchSuggester("search-input",
-        this.collection.getNames());
+        this.collection);
       return this;
     },
 
