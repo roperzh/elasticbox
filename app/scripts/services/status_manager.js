@@ -17,6 +17,8 @@ elasticbox.Services = elasticbox.Services || {};
   elasticbox.Services.StatusManager.prototype.changeApplicationStatus = function(feature) {
     this.unbindViews();
 
+    console.log(this.bindedViews);
+
     var newView = new elasticbox.Views[feature.get("view")]();
     this.bindedViews.push(newView);
 
@@ -25,7 +27,9 @@ elasticbox.Services = elasticbox.Services || {};
 
   elasticbox.Services.StatusManager.prototype.unbindViews = function() {
     for (var view in this.bindedViews) {
-      view.destroy();
+      this.bindedViews[view].unbind();
+      this.bindedViews[view].remove();
+      this.bindedViews.splice(view);
     }
   };
 
