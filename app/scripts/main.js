@@ -1,4 +1,4 @@
-/*global elasticbox, $*/
+/*global elasticbox, $, Backbone*/
 
 window.elasticbox = {
   Models: {},
@@ -9,6 +9,7 @@ window.elasticbox = {
   init: function() {
     'use strict';
     elasticbox.client = new $.es.Client();
+    Backbone.history.start();
     var view = new elasticbox.Views.PanelView();
     view.render();
   }
