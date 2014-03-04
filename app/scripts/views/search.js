@@ -12,7 +12,7 @@ elasticbox.Views = elasticbox.Views || {};
     el: ".search-bar",
 
     events: {
-      "click .icon-close": "clearSearchBar",
+      "click .icon-close": "clearOnIconClick",
       "keydown .autocomplete-input": "clearOnEscape"
     },
 
@@ -35,7 +35,7 @@ elasticbox.Views = elasticbox.Views || {};
       }
     },
 
-    clearSearchBar: function(e) {
+    clearOnIconClick: function(e) {
       e.preventDefault();
       this.widget.clear();
     }
