@@ -6,13 +6,17 @@ window.elasticbox = {
   Views: {},
   Routers: {},
   Services: {},
+
   init: function() {
     'use strict';
     elasticbox.client = new $.es.Client();
+
     Backbone.history.start();
-    var view = new elasticbox.Views.PanelView();
-    view.render();
+
+    _.assign(elasticbox, Backbone.Events);
+    new elasticbox.Services.StatusManager();
   },
+
   navigate: function(route, options) {
     'use strict';
     options = options || {};
@@ -22,7 +26,5 @@ window.elasticbox = {
 
 $(document).ready(function() {
   'use strict';
-  _.assign(elasticbox, Backbone.Events);
-  new elasticbox.Services.StatusManager();
   elasticbox.init();
 });

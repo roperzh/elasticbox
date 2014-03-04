@@ -8,6 +8,9 @@ elasticbox.Services = elasticbox.Services || {};
   elasticbox.Services.StatusManager = function() {
     this.bindedViews = [];
 
+    var view = new elasticbox.Views.PanelView();
+    view.render();
+
     elasticbox.on("statusChanged", this.changeApplicationStatus, this);
   };
 
@@ -16,6 +19,7 @@ elasticbox.Services = elasticbox.Services || {};
 
     var newView = new elasticbox.Views[feature.get("view")]();
     this.bindedViews.push(newView);
+
     elasticbox.navigate(feature.get("url"));
   };
 

@@ -23,10 +23,15 @@ elasticbox.Services = elasticbox.Services || {};
     this.options = _.assign({
       maxTokenGroups: 1,
       showErrors: "console",
+
       onChange: function (newValue) {
-        this.trigger("optionSelected", collection.findWhere({ name: newValue[0][0].value }));
+        this.trigger("optionSelected", collection.findWhere({
+          name: newValue[0][0].value
+        }));
+
         return [];
       },
+
       lists: {
         suggestions: {
           options: collection.getNames(),
