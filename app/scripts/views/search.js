@@ -30,9 +30,13 @@ elasticbox.Views = elasticbox.Views || {};
       maxTokenGroups: 1,
       showErrors: "console",
       lists: {
-        suggestions: ["Backbone", "Angular", "Angular", "Angular", "Angular", "Angular", "Angular", "Angular", "Angular", "Angular", "Angular", "Angular"]
+        suggestions: {
+          options: ["Backbone", "Angular", "Angular", "Angular", "Angular"],
+          matchOptions: function(input, matchedOptions) {
+            return input.length ? matchedOptions : [];
+          }
+        }
       },
-      initialList: []
     },
 
     clearSearchBar: function(e) {
