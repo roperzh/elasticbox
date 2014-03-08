@@ -5,11 +5,11 @@ elasticbox.Views = elasticbox.Views || {};
 (function () {
   'use strict';
 
-  elasticbox.Views.StatisticsView = Backbone.View.extend({
+  elasticbox.Views.NodeView = Backbone.View.extend({
 
     el: "#content-area",
 
-    template: JST['app/scripts/modules/content/statistics/statistics_template.ejs'],
+    template: JST['app/scripts/modules/content/statistics/node/node_template.ejs'],
 
     initialize: function () {
       this.render();

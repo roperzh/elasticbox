@@ -1,6 +1,14 @@
 [
 	{
-		"name": "Statistics",
-		"action": "statistics:cluster"
-	}
+		"name": "Node Statistics",
+		"action": "statistics:node"
+	},
+  {
+    "name": "Cluster Statistics",
+    "action": "statistics:cluster"
+  },
+  {
+    "name": "General Statistics",
+    "action": "statistics:general"
+  }
 ]

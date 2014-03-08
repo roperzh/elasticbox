@@ -13,10 +13,12 @@ _.extend(
 
     init: function () {
       'use strict';
-      elasticbox.client = new $.es.Client();
+      this.client = new $.es.Client();
 
-      var view = new elasticbox.Views.PanelView();
+      var view = new this.Views.PanelView();
       view.render();
+
+      this.trigger("statistics:general");
 
       Backbone.history.start();
     },
