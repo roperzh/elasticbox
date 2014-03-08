@@ -8,6 +8,7 @@ _.extend(
     Routers: {},
     Controllers: {},
     Services: {},
+
     bindedViews: [],
 
     init: function () {
@@ -26,21 +27,21 @@ _.extend(
       Backbone.history.navigate(route, options);
     },
 
-    bindView: function(view) {
+    bindView: function (view) {
       'use strict';
       this.bindedViews.push(view);
     },
 
-    unbindView: function(view) {
+    unbindView: function (view) {
       'use strict';
       view.unbind();
       view.remove();
       this.bindedViews.splice(view);
     },
 
-    unbindAll: function() {
+    unbindAll: function () {
       'use strict';
-      for(var view in this.bindedViews) {
+      for (var view in this.bindedViews) {
         this.unbindView(this.bindedViews[view]);
       }
     }
