@@ -1,7 +1,6 @@
 [
 	{
 		"name": "Statistics",
-		"url": "statistics",
-    "view": "StatisticsView"
+		"action": "statistics:cluster"
 	}
 ]

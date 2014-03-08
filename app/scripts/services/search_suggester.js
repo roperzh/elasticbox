@@ -43,7 +43,7 @@ elasticbox.Services = elasticbox.Services || {};
     }, customOptions, Backbone.Events);
 
     this.options.on("optionSelected", function (feature) {
-      elasticbox.trigger("statusChanged", feature);
+      elasticbox.trigger(feature.get("action"), feature);
     });
   };
 
