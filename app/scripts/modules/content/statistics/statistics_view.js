@@ -9,7 +9,7 @@ elasticbox.Views = elasticbox.Views || {};
 
     el: "#content-area",
 
-    template: JST['app/scripts/templates/statistics.ejs'],
+    template: JST['app/scripts/modules/content/statistics/statistics_template.ejs'],
 
     initialize: function () {
       this.render();

@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="http://i.icomoon.io/public/temp/aff12be4da/Elasticbox/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <!--<link rel="stylesheet" href="http://i.icomoon.io/public/temp/aff12be4da/Elasticbox/style.css">-->
+    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>-->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -28,7 +28,6 @@
     </div>
 
     <div id="content-area">
-      <p>Lateral Content</p>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -46,15 +45,18 @@
     <!-- build:js({.tmp,app}) scripts/main.js -->
     <script src="scripts/main.js"></script>
     <script src="scripts/templates.js"></script>
+
     <script src="scripts/services/search_suggester.js"></script>
     <script src="scripts/services/status_manager.js"></script>
-    <script src="scripts/views/search.js"></script>
-    <script src="scripts/views/panel.js"></script>
-    <script src="scripts/models/feature.js"></script>
-    <script src="scripts/collections/feature.js"></script>
-    <script src="scripts/views/panel_navigation.js"></script>
+
+    <script src="scripts/modules/panel/panel_view.js"></script>
+    <script src="scripts/modules/panel/navigation/navigation_view.js"></script>
+    <script src="scripts/modules/panel/search/search_view.js"></script>
+    <script src="scripts/modules/content/statistics/statistics_view.js"></script>
+
+    <script src="scripts/entities/feature.js"></script>
+
     <script src="scripts/routes/search.js"></script>
-    <script src="scripts/views/statistics.js"></script>
     <!-- endbuild -->
   </body>
 </html>

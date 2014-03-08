@@ -2,26 +2,26 @@
 
 elasticbox.Views = elasticbox.Views || {};
 
-(function() {
+(function () {
   'use strict';
 
-  elasticbox.Views.PanelNavigationView = Backbone.View.extend({
+  elasticbox.Views.NavigationView = Backbone.View.extend({
 
-    template: JST['app/scripts/templates/panel_navigation.ejs'],
+    template: JST['app/scripts/modules/panel/navigation/navigation_template.ejs'],
 
     events: {
       "click .item": "toggleActiveView"
     },
 
-    initialize: function() {
+    initialize: function () {
       this.render();
     },
 
-    render: function() {
+    render: function () {
       this.$el.html(this.template);
     },
 
-    toggleActiveView: function(e) {
+    toggleActiveView: function (e) {
       e.preventDefault();
       var target = $(e.currentTarget);
 
