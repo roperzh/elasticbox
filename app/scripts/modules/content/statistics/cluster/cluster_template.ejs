@@ -2,7 +2,11 @@
   <h1>Hello from cluster!</h1>
   <i>Just a little of information to know if everything is ok</i>
 
-  <h3>Settings</h3>
+  <h3 class="has-tooltip" title="<%= t.tooltip.tooltip_base %>">
+    Settings
+    <i class="icon-tooltip"></i>
+  </h3>
+
   <ul>
     <li>
      Persistent settings:
@@ -14,7 +18,10 @@
     </li>
   </ul>
 
-  <h3>Health</h3>
+  <h3 class="has-tooltip">
+    Health
+    <i class="icon-tooltip"></i>
+  </h3>
   <ul>
     <li>
      Status:

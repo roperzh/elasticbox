@@ -22,6 +22,8 @@ elasticbox.Views = elasticbox.Views || {};
         health: this.health
       }));
 
+      this.showTooltips();
+
       return this;
     },
 
@@ -38,6 +40,13 @@ elasticbox.Views = elasticbox.Views || {};
           }.bind(this));
     },
 
+    showTooltips: function() {
+      this.$(".icon-tooltip").tooltip({
+        theme: "tooltip-ligth",
+        interactive: true,
+        position: "right"
+      });
+    }
   });
 
 })();
