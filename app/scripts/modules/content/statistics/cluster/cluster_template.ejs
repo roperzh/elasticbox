@@ -1,30 +1,32 @@
-<h1>Hello from cluster!</h1>
-<i>Just a little of information to know if everything is ok</i>
+<div class="grid-100 content-item">
+  <h1>Hello from cluster!</h1>
+  <i>Just a little of information to know if everything is ok</i>
 
-<h3>Settings</h3>
-<ul>
-  <li>
-   Persistent settings:
-    <span><%= Object.keys(settings.persistent).length %></span>
-  </li>
-  <li>
-   Transient settings:
-    <span><%= Object.keys(settings.transient).length %></span>
-  </li>
-</ul>
+  <h3>Settings</h3>
+  <ul>
+    <li>
+     Persistent settings:
+      <span><%= Object.keys(settings.persistent).length %></span>
+    </li>
+    <li>
+     Transient settings:
+      <span><%= Object.keys(settings.transient).length %></span>
+    </li>
+  </ul>
 
-<h3>Health</h3>
-<ul>
-  <li>
-   Status:
-    <span><%= health.status %></span>
-  </li>
-  <li>
-   Number of nodes:
-    <span><%= health.number_of_nodes %></span>
-  </li>
-  <li>
-   Active primary shards:
-    <span><%= health.active_primary_shards %></span>
-  </li>
-</ul>
+  <h3>Health</h3>
+  <ul>
+    <li>
+     Status:
+      <span><%= health.status %></span>
+    </li>
+    <li>
+     Number of nodes:
+      <span><%= health.number_of_nodes %></span>
+    </li>
+    <li>
+     Active primary shards:
+      <span><%= health.active_primary_shards %></span>
+    </li>
+  </ul>
+</div>
