@@ -1,5 +1,7 @@
 /*global elasticbox, $, Backbone, _*/
 
+'use strict';
+
 _.extend(
   window.elasticbox = {
     Models: {},
@@ -12,12 +14,8 @@ _.extend(
     bindedViews: [],
 
     init: function () {
-      'use strict';
       this.client = new $.es.Client();
-
-      $.get("locales/en.json").done(function (response) {
-        this.t = response;
-      }.bind(this));
+      this.setLanguage("es");
 
       var view = new this.Views.PanelView();
       view.render();
@@ -28,34 +26,32 @@ _.extend(
     },
 
     navigate: function (route, options) {
-      'use strict';
       options = options || {};
       Backbone.history.navigate(route, options);
     },
 
     bindView: function (view) {
-      'use strict';
       this.bindedViews.push(view);
     },
 
     unbindView: function (view) {
-      'use strict';
       view.unbind();
       view.remove();
       this.bindedViews.splice(view);
     },
 
     unbindAll: function () {
-      'use strict';
       for (var view in this.bindedViews) {
         this.unbindView(this.bindedViews[view]);
       }
-    }
+    },
 
+    setLanguage: function(lang) {
+      window.t = window[lang];
+    }
   }, Backbone.Events
 );
 
 $(document).ready(function () {
-  'use strict';
   elasticbox.init();
 });
