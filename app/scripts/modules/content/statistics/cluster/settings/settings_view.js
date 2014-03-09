@@ -5,9 +5,9 @@ elasticbox.Views = elasticbox.Views || {};
 (function () {
   'use strict';
 
-  elasticbox.Views.HealthView = Backbone.View.extend({
+  elasticbox.Views.SettingsView = Backbone.View.extend({
 
-    template: JST['app/scripts/modules/content/statistics/cluster/health/health_template.ejs'],
+    template: JST['app/scripts/modules/content/statistics/cluster/settings/settings_template.ejs'],
 
     initialize: function () {
       this.cluster = elasticbox.client.cluster;
@@ -16,7 +16,7 @@ elasticbox.Views = elasticbox.Views || {};
 
     render: function () {
       this.$el.html(this.template({
-        health: this.health
+        settings: this.settings
       }));
 
       elasticbox.showTooltips(this.$el);
@@ -26,9 +26,9 @@ elasticbox.Views = elasticbox.Views || {};
 
     collectData: function () {
       $.when(
-        this.cluster.health())
-        .done(function (health) {
-          this.health = this.parseData(health);
+        this.cluster.getSettings())
+        .done(function (settings) {
+          this.settings = settings;
           this.render();
         }.bind(this));
     },

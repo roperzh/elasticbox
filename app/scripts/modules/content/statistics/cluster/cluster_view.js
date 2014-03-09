@@ -23,10 +23,10 @@ elasticbox.Views = elasticbox.Views || {};
       }));
 
       this.healthView = new elasticbox.Views.HealthView();
+      this.settingsView = new elasticbox.Views.SettingsView();
 
       this.$(".node-health").append(this.healthView.el);
-
-      elasticbox.showTooltips(this.$el);
+      this.$(".node-settings").append(this.settingsView.el);
 
       return this;
     },
