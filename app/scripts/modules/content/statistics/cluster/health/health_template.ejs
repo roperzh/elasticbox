@@ -1,0 +1,19 @@
+<h1><%= health.cluster_name %></h1>
+
+<h3 class="has-tooltip">
+  Health
+  <i class="icon-tooltip" title="<%= t.tooltip.cluster_health %>"></i>
+</h3>
+
+<span>
+  Status: <%= health.status %>
+</span>
+
+<ul>
+  <% _.each(_.keys(health.info), function(key){ %>
+    <li>
+     <%= key.titleize() + ":" %>
+      <span><%= health.info[key] %></span>
+    </li>
+  <% }) %>
+</ul>

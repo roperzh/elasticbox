@@ -22,7 +22,11 @@ elasticbox.Views = elasticbox.Views || {};
         health: this.health
       }));
 
-      this.showTooltips();
+      this.healthView = new elasticbox.Views.HealthView();
+
+      this.$(".node-health").append(this.healthView.el);
+
+      elasticbox.showTooltips(this.$el);
 
       return this;
     },
@@ -30,22 +34,12 @@ elasticbox.Views = elasticbox.Views || {};
     collectData: function () {
       $.when(
         this.cluster.getSettings(),
-        this.cluster.health(),
         this.cluster.state())
-          .done(function (settings, health, state) {
+          .done(function (settings, state) {
             this.settings = settings;
-            this.health = health;
             this.state = state;
             this.render();
           }.bind(this));
-    },
-
-    showTooltips: function() {
-      this.$(".icon-tooltip").tooltip({
-        theme: "tooltip-ligth",
-        interactive: true,
-        position: "right"
-      });
     }
   });
 
