@@ -10,7 +10,7 @@ elasticbox.Collections = elasticbox.Collections || {};
 
   elasticbox.Collections.FeatureCollection = Backbone.Collection.extend({
 
-    url: "/features.json",
+    url: "features.json",
 
     model: elasticbox.Models.FeatureModel,
 
