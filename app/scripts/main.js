@@ -15,6 +15,10 @@ _.extend(
       'use strict';
       this.client = new $.es.Client();
 
+      $.get("locales/en.json").done(function (response) {
+        this.t = response;
+      }.bind(this));
+
       var view = new this.Views.PanelView();
       view.render();
 
