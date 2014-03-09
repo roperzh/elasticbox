@@ -7,7 +7,7 @@ elasticbox.Views = elasticbox.Views || {};
 
   elasticbox.Views.NodeView = Backbone.View.extend({
 
-    el: "#content-area",
+    el: " .content-area",
 
     template: JST['app/scripts/modules/content/statistics/node/node_template.ejs'],
 

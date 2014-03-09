@@ -6,6 +6,12 @@
 // *************************************
 
 // -------------------------------------
+//   Vendor
+// -------------------------------------
+
+@import "unsemantic/assets/sass/unsemantic-grid-base";
+
+// -------------------------------------
 //   Fonts
 // -------------------------------------
 
@@ -22,16 +28,16 @@
 //   Base
 // -------------------------------------
 
-@import "base/base";
 @import "base/colors";
+@import "base/base";
 
 // -------------------------------------
 //   Layouts
 // -------------------------------------
 
 @import "layouts/control_bar";
-@import "layouts/content_area";
 @import "layouts/main_footer";
+@import "layouts/content";
 
 // -------------------------------------
 //   Modules

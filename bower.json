@@ -9,7 +9,8 @@
     "elasticsearch": "~1.5.9",
     "autocompletejs": "~0.2.1",
     "tooltipster": "~3.1.0",
-    "nprogress": "~0.1.2"
+    "nprogress": "~0.1.2",
+    "unsemantic": "*"
   },
   "devDependencies": {}
 }

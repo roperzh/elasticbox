@@ -7,7 +7,7 @@ elasticbox.Views = elasticbox.Views || {};
 
   elasticbox.Views.ClusterView = Backbone.View.extend({
 
-    el: "#content-area",
+    el: " .content-area",
 
     template: JST['app/scripts/modules/content/statistics/cluster/cluster_template.ejs'],
 
