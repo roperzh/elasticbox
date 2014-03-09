@@ -7,11 +7,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Elasticbox</title>
+
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/tooltipster/css/tooltipster.css">
+    <link rel="stylesheet" href="bower_components/tooltipster/css/themes/tooltipster-light.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -25,13 +28,16 @@
     <div id="control-bar">
     </div>
 
-    <div id="content-area">
+    <div id="content">
+        <section class="banner"></section>
+        <div class="content-area grid-100 tooltip" title="teatasdfadf"></div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!-- build:js scripts/vendor.js -->
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/elasticsearch/elasticsearch.jquery.js"></script>
+    <script src="bower_components/tooltipster/js/jquery.tooltipster.js"></script>
     <script src="bower_components/lodash/dist/lodash.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
     <script src="bower_components/autocompletejs/releases/0.2.1/autocomplete-0.2.1.js"></script>
