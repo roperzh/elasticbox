@@ -15,7 +15,7 @@ _.extend(
 
     init: function () {
       this.client = new $.es.Client();
-      this.setLanguage("es");
+      this.setLanguage("en");
 
       var view = new this.Views.PanelView();
       view.render();
@@ -44,6 +44,15 @@ _.extend(
       for (var view in this.bindedViews) {
         this.unbindView(this.bindedViews[view]);
       }
+    },
+
+    showTooltips: function (element) {
+      element.find(".icon-tooltip").tooltipster({
+        theme: "tooltipster-light",
+        interactive: true,
+        position: "right",
+        contentAsHTML: true
+      });
     },
 
     setLanguage: function (lang) {
