@@ -1,0 +1,43 @@
+// *************************************
+//
+//   Info box
+//    -> A box showing featured info
+//
+// *************************************
+
+.info-box {
+
+  padding: 20px;
+
+  border: 1px solid $contrast;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+
+  .graphic {
+    display: block;
+    float: left;
+
+    padding: 10px;
+    margin-right: 13px;
+
+    font-size: 25px;
+    border-radius: 100%;
+    color: white;
+  }
+
+  .label {
+    color: $contrast-ligther;
+  }
+
+  .title {
+    display: block;
+  }
+}
+
+.yellow {
+  color: #FCC633!important;
+
+  .graphic{
+    background: #FCC633;
+  }
+}

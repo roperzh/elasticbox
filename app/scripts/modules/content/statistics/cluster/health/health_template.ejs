@@ -5,15 +5,21 @@
   <i class="icon-tooltip" title="<%= t.tooltip.cluster_health %>"></i>
 </h3>
 
-<span>
-  Status: <%= health.status %>
-</span>
+<div class="<%= health.status %> info-box grid-35 suffix-65">
+  <i class="graphic icon-heart"></i>
+  <span>
+    <span class="title"><%= health.status %></span>
+    <small class="label">cluster status</small>
+  </span>
+</div>
 
-<ul>
-  <% _.each(_.keys(health.info), function(key){ %>
-    <li>
-     <%= key.titleize() + ":" %>
-      <span><%= health.info[key] %></span>
-    </li>
-  <% }) %>
-</ul>
+<div class="grid-100">
+  <ul>
+    <% _.each(_.keys(health.info), function(key){ %>
+      <li>
+       <%= key.titleize() + ":" %>
+        <span><%= health.info[key] %></span>
+      </li>
+    <% }) %>
+  </ul>
+</div>
