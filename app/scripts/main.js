@@ -46,12 +46,22 @@ _.extend(
       }
     },
 
-    setLanguage: function(lang) {
+    setLanguage: function (lang) {
       window.t = window[lang];
     }
   }, Backbone.Events
 );
 
 $(document).ready(function () {
+  var $document = $(document);
+
+  $document.ajaxSend(function () {
+    NProgress.start();
+  });
+
+  $document.ajaxStop(function() {
+    NProgress.done();
+  });
+
   elasticbox.init();
 });
