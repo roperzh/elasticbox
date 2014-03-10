@@ -7,24 +7,19 @@
 
 
 .trademark {
-  @include clearfix;
+  position: relative;
+  height: 50px;
 
   padding: 5px;
 
-  font-size: 35px;
   color: white;
-  text-align: center;
+  background: $base;
 
   .icon {
-    margin-left: 10px;
-    font-size: 45px;
-  }
+    position: absolute;
+    top: 0;
+    left: 15px;
 
-  .name {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    text-transform: lowercase;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
   }
 }
