@@ -9,23 +9,15 @@
 
 #control-bar {
   position: absolute;
-  top: 0;
+  top: 50px;
   bottom: 0;
   left: 0;
 
   width: 480px;
 
-  .header {
-    position: absolute;
-    top: 0;
-
-    width: 100%;
-    background: $base;
-  }
-
   .panel-content {
     position: absolute;
-    top: 112px;
+    top: 45px;
     bottom: 30px;
 
     width: 100%;
